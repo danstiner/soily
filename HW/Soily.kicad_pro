@@ -599,10 +599,10 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "/Users/dan/Downloads/out/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "Soily.step",
       "svg": "",
       "vrml": ""
     },
