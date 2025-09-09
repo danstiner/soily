@@ -1,0 +1,12 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "QR")(type "KiCad")(uri "${KIPRJMOD}/Components/QR.pretty")(options "")(descr ""))
+  (lib (name "CapacitiveStrips")(type "KiCad")(uri "${KIPRJMOD}/Components/CapacitiveStrips.pretty")(options "")(descr ""))
+  (lib (name "BQ25504RGTT")(type "KiCad")(uri "${KIPRJMOD}/Components/BQ25504RGTT")(options "")(descr ""))
+  (lib (name "TPS7A0233PDQNR")(type "KiCad")(uri "${KIPRJMOD}/Components/TPS7A0233PDQNR")(options "")(descr ""))
+  (lib (name "SHT30_DIS_B2_5KS")(type "KiCad")(uri "${KIPRJMOD}/Components/SHT30_DIS_B2_5KS")(options "")(descr ""))
+  (lib (name "FDC2212DNTR")(type "KiCad")(uri "${KIPRJMOD}/Components/FDC2212DNTR")(options "")(descr ""))
+  (lib (name "ABS07_32_768KHZ_T")(type "KiCad")(uri "${KIPRJMOD}/Components/ABS07_32_768KHZ_T")(options "")(descr ""))
+  (lib (name "USB4110_GF_A")(type "KiCad")(uri "${KIPRJMOD}/Components/USB4110_GF_A")(options "")(descr ""))
+  (lib (name "B0520WS_7_F")(type "KiCad")(uri "${KIPRJMOD}/Components/B0520WS_7_F/footprints.pretty")(options "")(descr ""))
+)
