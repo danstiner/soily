@@ -4914,45 +4914,49 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Sensor_Humidity:SHT30-DIS"
+		(symbol "Sensor_Humidity:SHT4x"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at -6.35 6.35 0)
+				(at 0 8.89 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify right)
 				)
 			)
-			(property "Value" "SHT30-DIS"
-				(at 6.35 6.35 0)
+			(property "Value" "SHT4x"
+				(at 0 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify right)
 				)
 			)
-			(property "Footprint" "Sensor_Humidity:Sensirion_DFN-8-1EP_2.5x2.5mm_P0.5mm_EP1.1x1.7mm"
-				(at 0 1.27 0)
+			(property "Footprint" "Sensor_Humidity:Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad"
+				(at 3.81 -6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Datasheets/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf"
-				(at 0 1.27 0)
+			(property "Datasheet" "https://sensirion.com/media/documents/33FD6951/624C4357/Datasheet_SHT4x.pdf"
+				(at 3.81 -8.89 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Description" "I²C humidity and temperature sensor, ±2%RH, ±0.2°C, DFN-8"
+			(property "Description" "Digital Humidity and Temperature Sensor, ±1%RH, ±0.1°C, I2C, 1.08-3.6V, 16bit, DFN-4"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4961,7 +4965,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "digital temperature humidity i2c"
+			(property "ki_keywords" "Sensirion environment environmental measurement digital SHT40 SHT41 SHT45"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4970,7 +4974,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "Sensirion*DFN*1EP*2.5x2.5mm*P0.5mm*"
+			(property "ki_fp_filters" "Sensirion?DFN*1.5x1.5mm*P0.8mm*SHT4x*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4979,10 +4983,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "SHT30-DIS_0_1"
+			(symbol "SHT4x_1_1"
 				(rectangle
-					(start -7.62 5.08)
-					(end 7.62 -5.08)
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -4991,12 +4995,10 @@
 						(type background)
 					)
 				)
-			)
-			(symbol "SHT30-DIS_1_1"
 				(pin input line
-					(at -10.16 2.54 0)
+					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "ADDR"
+					(name "SCL"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5011,99 +5013,8 @@
 						)
 					)
 				)
-				(pin input line
-					(at -10.16 0 0)
-					(length 2.54)
-					(name "~{RESET}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -10.16 -2.54 0)
-					(length 2.54)
-					(name "R"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 7.62 270)
-					(length 2.54)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "VSS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(hide yes)
-					(name "VSS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
-					(at 10.16 2.54 180)
+					(at -7.62 -2.54 0)
 					(length 2.54)
 					(name "SDA"
 						(effects
@@ -5120,28 +5031,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at 10.16 0 180)
+				(pin power_in line
+					(at 2.54 7.62 270)
 					(length 2.54)
-					(name "SCL"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 10.16 -2.54 180)
-					(length 2.54)
-					(name "ALERT"
+					(name "VDD"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5149,6 +5042,24 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 -7.62 90)
+					(length 2.54)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5752,7 +5663,7 @@
 		)
 		(uuid e3c40453-f03d-4aa4-8396-605b00592136)
 	)
-	(text "Capacitive Sense"
+	(text "Capacitance-to-Digital"
 		(exclude_from_sim no)
 		(at 21.59 115.57 0)
 		(effects
@@ -5762,6 +5673,16 @@
 			(justify left top)
 		)
 		(uuid "156f2ed0-d70e-4339-982f-e06e1c9f2365")
+	)
+	(text "L-C Tank Sensor"
+		(exclude_from_sim no)
+		(at 106.172 181.356 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "295866b3-420a-4f86-92cb-293f5efddf5d")
 	)
 	(text "Humidity"
 		(exclude_from_sim no)
@@ -5798,7 +5719,7 @@
 	)
 	(text "I2C Address 0x2A"
 		(exclude_from_sim no)
-		(at 22.098 121.158 0)
+		(at 22.098 119.38 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5843,7 +5764,7 @@
 	)
 	(text "I2C Address 0x44"
 		(exclude_from_sim no)
-		(at 148.59 120.65 0)
+		(at 149.098 119.38 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5897,12 +5818,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0ac974c6-1816-42aa-a3d5-aebcca5ed927")
-	)
-	(junction
-		(at 154.94 151.13)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0d3e7c63-a063-47a8-9d9b-49bbd38bef68")
 	)
 	(junction
 		(at 62.23 45.72)
@@ -5977,12 +5892,6 @@
 		(uuid "5fe941d0-4a9f-43ce-8c87-3874e9876754")
 	)
 	(junction
-		(at 149.86 140.97)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "64d68115-5630-424e-aaa4-0811607d76cc")
-	)
-	(junction
 		(at 74.93 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6023,12 +5932,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9142b2ff-1fa2-4cca-abed-89b6dd230757")
-	)
-	(junction
-		(at 165.1 151.13)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a1437ace-c937-402d-b88b-3af57dfcb3fd")
 	)
 	(junction
 		(at 38.1 175.26)
@@ -6073,7 +5976,7 @@
 		(uuid "ebdea971-2a40-4bde-b844-8adac4fe8214")
 	)
 	(junction
-		(at 149.86 129.54)
+		(at 149.86 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ef010ef2-a14a-4188-a848-f65415f3744e")
@@ -6103,14 +6006,6 @@
 	(no_connect
 		(at 53.34 67.31)
 		(uuid "6d7e14b9-d847-44e5-b33b-8d2f46d6c273")
-	)
-	(no_connect
-		(at 175.26 146.05)
-		(uuid "789704a3-b1bb-416a-a4b8-78c552a848a6")
-	)
-	(no_connect
-		(at 154.94 143.51)
-		(uuid "866b82e5-3441-47ef-829a-3acfde3df5ab")
 	)
 	(no_connect
 		(at 53.34 69.85)
@@ -6322,7 +6217,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 129.54) (xy 149.86 129.54)
+			(xy 170.18 128.27) (xy 149.86 128.27)
 		)
 		(stroke
 			(width 0)
@@ -6522,16 +6417,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 140.97) (xy 149.86 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "67564498-963b-4379-b05c-1d47f24b01bc")
-	)
-	(wire
-		(pts
 			(xy 88.9 39.37) (xy 91.44 39.37)
 		)
 		(stroke
@@ -6582,26 +6467,6 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 151.13) (xy 154.94 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "74e9b9f3-c3fa-4290-8cbc-3710dd3419ed")
-	)
-	(wire
-		(pts
-			(xy 154.94 151.13) (xy 165.1 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7bd0c357-ac62-49fc-9d36-32e8e008c600")
-	)
-	(wire
-		(pts
 			(xy 171.45 35.56) (xy 162.56 35.56)
 		)
 		(stroke
@@ -6649,16 +6514,6 @@
 			(type default)
 		)
 		(uuid "84b1d786-c684-4feb-9ac9-289d6428bca5")
-	)
-	(wire
-		(pts
-			(xy 149.86 137.16) (xy 149.86 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89a6e920-b6bb-475f-b409-8d194ff28508")
 	)
 	(wire
 		(pts
@@ -6842,16 +6697,6 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 140.97) (xy 149.86 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c54d4f5a-0452-4161-b66b-45afcd751785")
-	)
-	(wire
-		(pts
 			(xy 29.21 152.4) (xy 29.21 153.67)
 		)
 		(stroke
@@ -6992,16 +6837,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 146.05) (xy 154.94 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb49735d-6bd8-48ce-bb25-b800ded923e7")
-	)
-	(wire
-		(pts
 			(xy 265.43 78.74) (xy 265.43 82.55)
 		)
 		(stroke
@@ -7092,7 +6927,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 135.89) (xy 165.1 129.54)
+			(xy 170.18 132.08) (xy 170.18 128.27)
 		)
 		(stroke
 			(width 0)
@@ -7243,6 +7078,17 @@
 		)
 		(uuid "07ac6152-65ac-4083-98d7-baa9a56a6458")
 	)
+	(hierarchical_label "SDA"
+		(shape bidirectional)
+		(at 160.02 142.24 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0cf03e03-bd13-43a3-b55c-c6eb4c155667")
+	)
 	(hierarchical_label "EOH"
 		(shape input)
 		(at 29.21 153.67 180)
@@ -7386,17 +7232,6 @@
 		)
 		(uuid "6811354a-e3aa-4eff-9906-853a69d614a6")
 	)
-	(hierarchical_label "SCL"
-		(shape input)
-		(at 175.26 143.51 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "68e1ff52-34b0-4b19-a009-9ab6c891d635")
-	)
 	(hierarchical_label "UART_TX"
 		(shape input)
 		(at 242.57 149.86 180)
@@ -7407,6 +7242,17 @@
 			(justify right)
 		)
 		(uuid "69841f90-997b-4a8f-b666-630c8cd6b6db")
+	)
+	(hierarchical_label "SCL"
+		(shape input)
+		(at 160.02 137.16 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7619c6fa-e6e8-43ae-aa78-daf0f5cbbb46")
 	)
 	(hierarchical_label "SDA"
 		(shape input)
@@ -7517,17 +7363,6 @@
 			(justify left)
 		)
 		(uuid "c11ed184-b5f7-44f8-8221-8545179da5ab")
-	)
-	(hierarchical_label "SDA"
-		(shape bidirectional)
-		(at 175.26 140.97 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "cadb3dcc-260e-4f37-9f93-b554050730dd")
 	)
 	(hierarchical_label "LED_R"
 		(shape output)
@@ -7650,6 +7485,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey Part Number" "490-5798-1-ND"
+			(at 74.93 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "375ffa9c-ad8e-455b-a1b5-e43f73dfd4d5")
 		)
@@ -7667,16 +7511,16 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 165.1 151.13 0)
+		(at 149.86 135.89 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "03f8f697-6779-4e50-b953-fe62d7e2bc7f")
-		(property "Reference" "#PWR024"
-			(at 165.1 157.48 0)
+		(uuid "0375e713-60bf-45aa-99a8-f2f1257c0411")
+		(property "Reference" "#PWR021"
+			(at 149.86 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7685,7 +7529,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 165.1 156.21 0)
+			(at 149.86 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7693,7 +7537,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 165.1 151.13 0)
+			(at 149.86 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7702,7 +7546,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.1 151.13 0)
+			(at 149.86 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7711,7 +7555,73 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 165.1 151.13 0)
+			(at 149.86 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b380cf25-5834-435f-985c-43831834a9bc")
+		)
+		(instances
+			(project "Soily"
+				(path "/997c6132-d469-42f4-b223-4701bc9a501f"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 170.18 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "03f8f697-6779-4e50-b953-fe62d7e2bc7f")
+		(property "Reference" "#PWR024"
+			(at 170.18 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 170.18 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 170.18 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7723,7 +7633,7 @@
 			(uuid "156acbc1-5219-4190-8c54-791851688844")
 		)
 		(instances
-			(project ""
+			(project "Soily"
 				(path "/997c6132-d469-42f4-b223-4701bc9a501f"
 					(reference "#PWR024")
 					(unit 1)
@@ -7880,7 +7790,7 @@
 				)
 			)
 		)
-		(property "Value" "FDC2212DNTR"
+		(property "Value" "FDC2212"
 			(at 106.68 140.97 0)
 			(effects
 				(font
@@ -7898,7 +7808,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/gpn/fdc2212"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/fdc2112.pdf"
 			(at 106.68 161.29 0)
 			(effects
 				(font
@@ -7908,7 +7818,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Capacitive Touch Proximity Only 12-WSON (4x4)"
+			(at 106.68 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part Number" "FDC2212DNTT"
+			(at 106.68 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "296-42304-1-ND"
 			(at 106.68 161.29 0)
 			(effects
 				(font
@@ -8186,7 +8114,7 @@
 				)
 			)
 		)
-		(property "Value" "XL-5050RGBC"
+		(property "Value" "150505M173300"
 			(at 205.74 129.54 0)
 			(effects
 				(font
@@ -8194,7 +8122,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_RGB_5050-6"
+		(property "Footprint" "ul_150505M173300:LED_150505M173300_WRE"
 			(at 205.74 142.24 0)
 			(effects
 				(font
@@ -8203,7 +8131,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6472/5962_XL-5050RGBC%20%205050%E4%B8%83%E5%BD%A9%E5%85%AD%E8%84%9A.pdf"
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150505M173300.pdf"
 			(at 205.74 142.24 0)
 			(effects
 				(font
@@ -8213,6 +8141,24 @@
 			)
 		)
 		(property "Description" "RGB LED, 6 pin package"
+			(at 205.74 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "732-12000-1-ND"
+			(at 205.74 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Würth Elektronik"
 			(at 205.74 140.97 0)
 			(effects
 				(font
@@ -8342,7 +8288,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
+		(property "Footprint" "Inductor_SMD:L_1210_3225Metric"
 			(at 49.53 171.45 0)
 			(effects
 				(font
@@ -8360,7 +8306,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Inductor with iron core"
+		(property "Description" "18 µH Shielded Drum Core, Wirewound Inductor 120 mA 3.3Ohm Max 1210 (3225 Metric)"
+			(at 49.53 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "CMH322522-180KLCT-ND"
 			(at 49.53 171.45 0)
 			(effects
 				(font
@@ -8563,6 +8518,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 60.96 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "490-4943-1-ND"
 			(at 60.96 171.45 0)
 			(effects
 				(font
@@ -8789,8 +8753,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Sensor_Humidity:SHT30-DIS")
-		(at 165.1 143.51 0)
+		(lib_id "Sensor_Humidity:SHT4x")
+		(at 167.64 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8799,7 +8763,7 @@
 		(fields_autoplaced yes)
 		(uuid "35ab3652-3a9e-420f-969a-5298766610f6")
 		(property "Reference" "U4"
-			(at 167.2433 133.35 0)
+			(at 173.99 138.4299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8807,8 +8771,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SHT30-DIS"
-			(at 167.2433 135.89 0)
+		(property "Value" "SHT40"
+			(at 173.99 140.9699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8816,8 +8780,28 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Sensor_Humidity:Sensirion_DFN-8-1EP_2.5x2.5mm_P0.5mm_EP1.1x1.7mm"
-			(at 165.1 142.24 0)
+		(property "Footprint" "Sensor_Humidity:Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad"
+			(at 171.45 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://sensirion.com/media/documents/33FD6951/624C4357/Datasheet_SHT4x.pdf"
+			(at 171.45 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Digital Humidity and Temperature Sensor, ±1%RH, ±0.1°C, I2C, 1.08-3.6V, 16bit, DFN-4"
+			(at 167.64 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8825,8 +8809,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://sensirion.com/media/documents/213E6A3B/63A5A569/Datasheet_SHT3x_DIS.pdf"
-			(at 165.1 142.24 0)
+		(property "Digikey Part Number" "1649-SHT40-AD1F-R2CT-ND"
+			(at 167.64 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8834,8 +8818,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "I²C humidity and temperature sensor, ±2%RH, ±0.2°C, DFN-8"
-			(at 165.1 143.51 0)
+		(property "Manufacturer" "Sensirion AG"
+			(at 167.64 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8845,21 +8829,6 @@
 		)
 		(pin "1"
 			(uuid "f03ddebd-a329-447f-acbe-b3b92705115d")
-		)
-		(pin "7"
-			(uuid "c91d1216-9fc9-4eb9-86e7-1a5b08534b6d")
-		)
-		(pin "6"
-			(uuid "41baafd5-dbcc-4998-8eb8-1456a8591674")
-		)
-		(pin "5"
-			(uuid "a2d3339c-7ff4-47e9-98ce-4ec32e76c8b8")
-		)
-		(pin "8"
-			(uuid "d25bbb06-1ff1-463c-9a2b-7d2bf90eb6d1")
-		)
-		(pin "9"
-			(uuid "e5ee72ab-fc0e-4711-b9f8-f93344e2fd16")
 		)
 		(pin "2"
 			(uuid "c3f10a32-1229-4f9a-82c1-2187e057c5bb")
@@ -8934,6 +8903,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey Part Number" "490-5798-1-ND"
+			(at 64.77 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "495f3288-a7bc-4af6-a9d4-adbf66e46896")
 		)
@@ -8996,6 +8974,15 @@
 			)
 		)
 		(property "Description" "ESP32-C2-MINI-1 family is an ultra-low-power MCU-based SoC solution that supports Bluetooth®Low Energy (Bluetooth LE), Zigbee 3.0 and Matter"
+			(at 215.9 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "1965-ESP32-H2-MINI-1-H4CT-ND"
 			(at 215.9 67.31 0)
 			(effects
 				(font
@@ -9291,6 +9278,33 @@
 				(hide yes)
 			)
 		)
+		(property "Part Number" "AP2112K-3.3TRG1"
+			(at 99.06 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Diodes Incorporated"
+			(at 99.06 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "AP2112K-3.3TRG1DICT-ND"
+			(at 99.06 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b7301492-d115-47b2-991c-add1412f9186")
 		)
@@ -9487,7 +9501,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R61A106ME69-01.pdf"
 			(at 191.77 31.75 0)
 			(effects
 				(font
@@ -9497,6 +9511,24 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 191.77 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part Number" "GRM188R61A106ME69D"
+			(at 191.77 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "490-10475-1-ND"
 			(at 191.77 31.75 0)
 			(effects
 				(font
@@ -9904,6 +9936,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey Part Number" "490-4781-1-ND"
+			(at 77.47 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "19276399-001a-4050-90e0-82141bf06711")
 		)
@@ -10211,6 +10252,24 @@
 				(hide yes)
 			)
 		)
+		(property "Part Number" "ABS07-32.768KHZ-T"
+			(at 160.02 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "535-9542-1-ND"
+			(at 160.02 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "abecac55-19bc-4940-b001-486c9841915f")
 		)
@@ -10405,6 +10464,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 162.56 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "490-1543-1-ND"
 			(at 162.56 39.37 0)
 			(effects
 				(font
@@ -10618,6 +10686,33 @@
 				(hide yes)
 			)
 		)
+		(property "Part Number" "GRM188R61A105KA61D"
+			(at 88.9 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "490-1543-1-ND"
+			(at 88.9 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field7" ""
+			(at 88.9 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "73be56fe-f771-4f9d-b5d8-3b0b195d7b04")
 		)
@@ -10762,53 +10857,21 @@
 				(hide yes)
 			)
 		)
-		(property "Description_1" "USB-C (USB TYPE-C) USB 2.0 Receptacle Connector 24 (16+8 Dummy) Position Surface Mount, Right Angle; Through Hole"
+		(property "Part Number" "USB4105-GF-A"
 			(at 38.1 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify bottom)
 				(hide yes)
 			)
 		)
-		(property "Package" "None"
+		(property "Digikey Part Number" "2073-USB4105-GF-ACT-ND"
 			(at 38.1 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Price" "None"
-			(at 38.1 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MP" "USB4110GFA"
-			(at 38.1 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Availability" "In Stock"
-			(at 38.1 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
 				(hide yes)
 			)
 		)
@@ -11058,6 +11121,33 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey Part Number" "4809-SKRKAHE020CT-ND"
+			(at 160.02 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Alps Alpine"
+			(at 160.02 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part Number" "SKRKAHE020"
+			(at 160.02 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4d095ebf-ed27-4049-a74a-7425fcb9d93c")
 		)
@@ -11251,7 +11341,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Schottky diode, small symbol"
+		(property "Description" "DIODE SCHOTTKY 20V 500MA SOD323"
+			(at 77.47 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part Number" "B0520WS-7-F"
+			(at 77.47 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "B0520WS-FDICT-ND"
 			(at 77.47 39.37 0)
 			(effects
 				(font
@@ -11344,7 +11452,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 149.86 129.54 0)
+		(at 149.86 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11353,7 +11461,7 @@
 		(fields_autoplaced yes)
 		(uuid "9587cbf2-e08d-4ea0-9744-6e1cf8788943")
 		(property "Reference" "#PWR017"
-			(at 149.86 133.35 0)
+			(at 149.86 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11362,7 +11470,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 149.86 124.46 0)
+			(at 149.86 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11370,7 +11478,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 149.86 129.54 0)
+			(at 149.86 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11379,7 +11487,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 149.86 129.54 0)
+			(at 149.86 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11388,7 +11496,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 149.86 129.54 0)
+			(at 149.86 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12071,7 +12179,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "XTAL OSC XO 40.0000MHZ CMOS SMD"
+			(at 29.21 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "110-625L3C040M00000CT-ND"
+			(at 29.21 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "CTS-Frequency Controls"
 			(at 29.21 153.67 0)
 			(effects
 				(font
@@ -12368,7 +12494,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 149.86 133.35 0)
+		(at 149.86 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12377,7 +12503,7 @@
 		(fields_autoplaced yes)
 		(uuid "d3181e5a-b647-4824-9b8d-9ed56d2ced2b")
 		(property "Reference" "C10"
-			(at 153.67 132.0799 0)
+			(at 153.67 130.8099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12386,7 +12512,7 @@
 			)
 		)
 		(property "Value" "0.1u"
-			(at 153.67 134.6199 0)
+			(at 153.67 133.3499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12395,7 +12521,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 150.8252 137.16 0)
+			(at 150.8252 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12404,7 +12530,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 149.86 133.35 0)
+			(at 149.86 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12413,7 +12539,16 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 149.86 133.35 0)
+			(at 149.86 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "490-5798-1-ND"
+			(at 149.86 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12692,6 +12827,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey Part Number" "490-1543-1-ND"
+			(at 107.95 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ab5fd8a9-12f4-4b20-bea5-c9bb73ade1da")
 		)
@@ -12824,6 +12968,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 204.47 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "490-5798-1-ND"
 			(at 204.47 31.75 0)
 			(effects
 				(font
@@ -13293,6 +13446,33 @@
 			)
 		)
 		(property "Description" "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"
+			(at 71.12 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part Number" "USBLC6-2SC6"
+			(at 71.12 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "STMicroelectronics"
+			(at 71.12 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "497-5235-1-ND"
 			(at 71.12 54.61 0)
 			(effects
 				(font

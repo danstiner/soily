@@ -9,4 +9,5 @@
   (lib (name "ABS07_32_768KHZ_T")(type "KiCad")(uri "${KIPRJMOD}/Components/ABS07_32_768KHZ_T")(options "")(descr ""))
   (lib (name "USB4110_GF_A")(type "KiCad")(uri "${KIPRJMOD}/Components/USB4110_GF_A")(options "")(descr ""))
   (lib (name "B0520WS_7_F")(type "KiCad")(uri "${KIPRJMOD}/Components/B0520WS_7_F/footprints.pretty")(options "")(descr ""))
+  (lib (name "ul_150505M173300")(type "KiCad")(uri "${KIPRJMOD}/Components/ul_150505M173300/KiCADv6/footprints.pretty")(options "")(descr ""))
 )

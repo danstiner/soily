@@ -86,6 +86,10 @@
         [
           "starved_thermal|92645000|63320000|70b5bbea-99a9-4b8f-9ee7-f2b081986953|d80666b1-bbdd-431a-a0f0-b9b5d7a56db7|F.Cu",
           ""
+        ],
+        [
+          "starved_thermal|94975000|54850000|70b5bbea-99a9-4b8f-9ee7-f2b081986953|bd896497-e318-4f1b-ade7-016fc48768ab|F.Cu",
+          ""
         ]
       ],
       "meta": {
@@ -749,6 +753,12 @@
           "group_by": false,
           "label": "#",
           "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part Number",
+          "name": "Part Number",
           "show": false
         }
       ],
