@@ -5652,7 +5652,7 @@
 	)
 	(rectangle
 		(start 231.14 111.76)
-		(end 279.4 158.75)
+		(end 279.4 162.56)
 		(stroke
 			(width 0.254)
 			(type dash)
@@ -5697,7 +5697,7 @@
 	)
 	(text "Short IO9\nto GND for\nprogramming\n\nShort RESET\nmomentarily\nto reboot"
 		(exclude_from_sim no)
-		(at 260.604 129.286 0)
+		(at 260.604 128.016 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6017,7 +6017,7 @@
 	)
 	(wire
 		(pts
-			(xy 243.84 139.7) (xy 242.57 139.7)
+			(xy 243.84 138.43) (xy 242.57 138.43)
 		)
 		(stroke
 			(width 0)
@@ -6637,6 +6637,16 @@
 	)
 	(wire
 		(pts
+			(xy 245.11 158.75) (xy 242.57 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad2d831c-0ee8-4e4e-994c-44db68617c9a")
+	)
+	(wire
+		(pts
 			(xy 53.34 57.15) (xy 53.34 59.69)
 		)
 		(stroke
@@ -6774,6 +6784,16 @@
 			(type default)
 		)
 		(uuid "d0a17f41-db09-4761-803d-f4ea2e9a3550")
+	)
+	(wire
+		(pts
+			(xy 267.97 158.75) (xy 265.43 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d21cca5e-c45a-47bc-ae57-b2c039a622b2")
 	)
 	(wire
 		(pts
@@ -6985,6 +7005,16 @@
 		)
 		(uuid "7c36aea3-9a5a-432f-b014-9ce9e095c80d")
 	)
+	(label "SENSE_SOIL+"
+		(at 245.11 158.75 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "827fd3f5-bbf9-411b-bd7b-dfcecc95e539")
+	)
 	(label "D+"
 		(at 53.34 57.15 0)
 		(effects
@@ -7044,6 +7074,16 @@
 			(justify left bottom)
 		)
 		(uuid "b259fd7e-466a-4108-b2be-347377e07d75")
+	)
+	(label "SENSE_SOIL-"
+		(at 267.97 158.75 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b72b20f3-90a6-4ddd-857b-477051d3b5a8")
 	)
 	(hierarchical_label "RESET"
 		(shape input)
@@ -7135,7 +7175,7 @@
 	)
 	(hierarchical_label "FDC_OFF"
 		(shape input)
-		(at 265.43 154.94 180)
+		(at 265.43 153.67 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7157,7 +7197,7 @@
 	)
 	(hierarchical_label "RESET"
 		(shape input)
-		(at 242.57 144.78 180)
+		(at 242.57 143.51 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7179,7 +7219,7 @@
 	)
 	(hierarchical_label "UART_RX"
 		(shape output)
-		(at 242.57 154.94 180)
+		(at 242.57 153.67 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7201,7 +7241,7 @@
 	)
 	(hierarchical_label "EOH"
 		(shape input)
-		(at 265.43 149.86 180)
+		(at 265.43 148.59 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7234,7 +7274,7 @@
 	)
 	(hierarchical_label "UART_TX"
 		(shape input)
-		(at 242.57 149.86 180)
+		(at 242.57 148.59 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7256,7 +7296,7 @@
 	)
 	(hierarchical_label "SDA"
 		(shape input)
-		(at 265.43 144.78 180)
+		(at 265.43 143.51 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7289,7 +7329,7 @@
 	)
 	(hierarchical_label "SCL"
 		(shape input)
-		(at 265.43 139.7 180)
+		(at 265.43 138.43 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7311,7 +7351,7 @@
 	)
 	(hierarchical_label "BOOTMODE"
 		(shape input)
-		(at 243.84 139.7 180)
+		(at 243.84 138.43 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7486,6 +7526,51 @@
 			)
 		)
 		(property "Digikey Part Number" "490-5798-1-ND"
+			(at 74.93 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 74.93 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 74.93 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 74.93 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 74.93 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
 			(at 74.93 146.05 0)
 			(effects
 				(font
@@ -7709,7 +7794,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 242.57 127 0)
+		(at 242.57 125.73 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7717,7 +7802,7 @@
 		(dnp no)
 		(uuid "04421705-b3dd-41c9-9751-f66dfb6fdfa6")
 		(property "Reference" "#PWR025"
-			(at 242.57 130.81 0)
+			(at 242.57 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7726,7 +7811,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 242.57 121.92 0)
+			(at 242.57 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7734,7 +7819,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 242.57 127 0)
+			(at 242.57 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7743,7 +7828,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 242.57 127 0)
+			(at 242.57 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7752,7 +7837,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 242.57 127 0)
+			(at 242.57 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7837,6 +7922,51 @@
 			)
 		)
 		(property "Digikey Part Number" "296-42304-1-ND"
+			(at 106.68 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 106.68 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 106.68 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 106.68 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 106.68 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
 			(at 106.68 161.29 0)
 			(effects
 				(font
@@ -7948,6 +8078,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 214.63 146.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 214.63 146.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 214.63 146.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 214.63 146.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 214.63 146.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9abf8e27-cf50-482d-96e0-0eccd131f268")
 		)
@@ -8008,6 +8183,51 @@
 		)
 		(property "Description" "Resistor"
 			(at 260.35 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 260.35 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "311-22.0HRCT-ND"
+			(at 260.35 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 260.35 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 260.35 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 260.35 57.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8167,6 +8387,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 205.74 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 205.74 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 205.74 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 205.74 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 205.74 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "6757c753-50ef-47fd-a4d1-cc97be50a99c")
 		)
@@ -8246,6 +8511,60 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey Part Number" "311-10.0KHRCT-ND"
+			(at 265.43 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 265.43 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 265.43 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 265.43 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 265.43 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 265.43 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d1aec40c-8c13-4276-80b9-318d2166b596")
 		)
@@ -8279,7 +8598,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "18uH"
+		(property "Value" "10uH"
 			(at 52.07 172.72 0)
 			(effects
 				(font
@@ -8306,7 +8625,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "18 µH Shielded Drum Core, Wirewound Inductor 120 mA 3.3Ohm Max 1210 (3225 Metric)"
+		(property "Description" "10 µH Shielded Drum Core, Wirewound Inductor 150 mA 2.1Ohm Max 1210 (3225 Metric)"
 			(at 49.53 171.45 0)
 			(effects
 				(font
@@ -8315,7 +8634,52 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey Part Number" "CMH322522-180KLCT-ND"
+		(property "Digikey Part Number" "118-CMH322522-100KLCT-ND"
+			(at 49.53 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 49.53 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 49.53 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 49.53 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 49.53 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
 			(at 49.53 171.45 0)
 			(effects
 				(font
@@ -8407,7 +8771,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 265.43 154.94 270)
+		(at 265.43 153.67 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8415,7 +8779,7 @@
 		(dnp no)
 		(uuid "28de5a01-3464-4dcc-9441-1a1d6ea9a1e1")
 		(property "Reference" "TP11"
-			(at 270.51 153.6699 90)
+			(at 270.51 152.3999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8424,7 +8788,7 @@
 			)
 		)
 		(property "Value" "FDC_OFF"
-			(at 270.51 156.2099 90)
+			(at 270.51 154.9399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8433,7 +8797,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 265.43 160.02 0)
+			(at 265.43 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8442,7 +8806,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 265.43 160.02 0)
+			(at 265.43 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8451,7 +8815,52 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 265.43 154.94 0)
+			(at 265.43 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 265.43 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 265.43 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 265.43 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 265.43 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 265.43 153.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8526,7 +8935,52 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey Part Number" "490-4943-1-ND"
+		(property "Digikey Part Number" "490-16409-1-ND"
+			(at 60.96 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 60.96 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 60.96 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 60.96 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 60.96 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
 			(at 60.96 171.45 0)
 			(effects
 				(font
@@ -8552,7 +9006,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 242.57 154.94 270)
+		(at 242.57 153.67 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8560,7 +9014,7 @@
 		(dnp no)
 		(uuid "2d904800-f983-4d81-81cf-01907a05659b")
 		(property "Reference" "TP6"
-			(at 247.65 153.6699 90)
+			(at 247.65 152.3999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8569,7 +9023,7 @@
 			)
 		)
 		(property "Value" "UART_RX"
-			(at 247.65 156.2099 90)
+			(at 247.65 154.9399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8578,7 +9032,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 242.57 160.02 0)
+			(at 242.57 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8587,7 +9041,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 242.57 160.02 0)
+			(at 242.57 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8596,7 +9050,52 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 242.57 154.94 0)
+			(at 242.57 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 242.57 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 242.57 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 242.57 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 242.57 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 242.57 153.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8671,6 +9170,60 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 166.37 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 166.37 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 166.37 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 166.37 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 166.37 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "490-8009-1-ND"
+			(at 166.37 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "47a252d7-c3fb-44dc-9345-6db73d968bca")
 		)
@@ -8688,7 +9241,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 265.43 144.78 270)
+		(at 265.43 143.51 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8696,7 +9249,7 @@
 		(dnp no)
 		(uuid "30abc70e-fb5f-44ae-944e-30042052875c")
 		(property "Reference" "TP8"
-			(at 270.51 143.5099 90)
+			(at 270.51 142.2399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8705,7 +9258,7 @@
 			)
 		)
 		(property "Value" "SDA"
-			(at 270.51 146.0499 90)
+			(at 270.51 144.7799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8714,7 +9267,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 265.43 149.86 0)
+			(at 265.43 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8723,7 +9276,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 265.43 149.86 0)
+			(at 265.43 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8732,7 +9285,52 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 265.43 144.78 0)
+			(at 265.43 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 265.43 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 265.43 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 265.43 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 265.43 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 265.43 143.51 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8827,6 +9425,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 167.64 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 167.64 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 167.64 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 167.64 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 167.64 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f03ddebd-a329-447f-acbe-b3b92705115d")
 		)
@@ -8912,6 +9555,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 64.77 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 64.77 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 64.77 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 64.77 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 64.77 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "495f3288-a7bc-4af6-a9d4-adbf66e46896")
 		)
@@ -8983,6 +9671,51 @@
 			)
 		)
 		(property "Digikey Part Number" "1965-ESP32-H2-MINI-1-H4CT-ND"
+			(at 215.9 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 215.9 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 215.9 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 215.9 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 215.9 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
 			(at 215.9 67.31 0)
 			(effects
 				(font
@@ -9305,6 +10038,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 99.06 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 99.06 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 99.06 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 99.06 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 99.06 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b7301492-d115-47b2-991c-add1412f9186")
 		)
@@ -9400,7 +10178,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 265.43 149.86 270)
+		(at 265.43 148.59 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9408,7 +10186,7 @@
 		(dnp no)
 		(uuid "3a5863da-e601-418f-8196-93b6d311919a")
 		(property "Reference" "TP10"
-			(at 270.51 148.5899 90)
+			(at 270.51 147.3199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9417,7 +10195,7 @@
 			)
 		)
 		(property "Value" "EOH"
-			(at 270.51 151.1299 90)
+			(at 270.51 149.8599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9426,7 +10204,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 265.43 154.94 0)
+			(at 265.43 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9435,7 +10213,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 265.43 154.94 0)
+			(at 265.43 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9444,7 +10222,52 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 265.43 149.86 0)
+			(at 265.43 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 265.43 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 265.43 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 265.43 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 265.43 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 265.43 148.59 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9537,6 +10360,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 191.77 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 191.77 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 191.77 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 191.77 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 191.77 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7eaca19a-286c-4171-af47-a7ccbe770632")
 		)
@@ -9607,6 +10475,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 15.24 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 15.24 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 15.24 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 15.24 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 15.24 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project ""
 				(path "/997c6132-d469-42f4-b223-4701bc9a501f"
@@ -9618,7 +10531,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 242.57 132.08 270)
+		(at 242.57 130.81 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9627,7 +10540,7 @@
 		(fields_autoplaced yes)
 		(uuid "3f744fbc-288c-4ea7-919b-b2707d930078")
 		(property "Reference" "TP2"
-			(at 247.65 130.8099 90)
+			(at 247.65 129.5399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9636,7 +10549,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 247.65 133.3499 90)
+			(at 247.65 132.0799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9645,7 +10558,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 242.57 137.16 0)
+			(at 242.57 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9654,7 +10567,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 242.57 137.16 0)
+			(at 242.57 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9663,7 +10576,52 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 242.57 132.08 0)
+			(at 242.57 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 242.57 130.81 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 242.57 130.81 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 242.57 130.81 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 242.57 130.81 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 242.57 130.81 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9744,6 +10702,117 @@
 			(project "Soily"
 				(path "/997c6132-d469-42f4-b223-4701bc9a501f"
 					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 242.57 158.75 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "481f5ba4-c42e-40dd-8a2f-cd73c0e9a520")
+		(property "Reference" "TP9"
+			(at 247.65 157.4799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SOIL_A"
+			(at 247.65 160.0199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 242.57 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 242.57 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 242.57 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 242.57 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 242.57 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 242.57 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 242.57 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 242.57 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "55b38eaf-5dbf-4deb-a096-8d37e88ecd15")
+		)
+		(instances
+			(project "Soily"
+				(path "/997c6132-d469-42f4-b223-4701bc9a501f"
+					(reference "TP9")
 					(unit 1)
 				)
 			)
@@ -9945,6 +11014,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 77.47 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 77.47 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 77.47 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 77.47 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 77.47 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "19276399-001a-4050-90e0-82141bf06711")
 		)
@@ -10015,6 +11129,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 15.24 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 15.24 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 15.24 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 15.24 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 15.24 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project ""
 				(path "/997c6132-d469-42f4-b223-4701bc9a501f"
@@ -10069,6 +11228,51 @@
 		)
 		(property "Description" "Resistor"
 			(at 214.63 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 214.63 140.97 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 214.63 140.97 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 214.63 140.97 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 214.63 140.97 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 214.63 140.97 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10136,6 +11340,60 @@
 		)
 		(property "Description" "Resistor"
 			(at 57.15 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "311-5.10KHRCT-ND"
+			(at 57.15 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 57.15 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 57.15 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 57.15 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 57.15 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 57.15 46.99 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10270,6 +11528,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 160.02 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 160.02 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 160.02 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 160.02 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 160.02 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "abecac55-19bc-4940-b001-486c9841915f")
 		)
@@ -10353,7 +11656,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 242.57 144.78 270)
+		(at 242.57 143.51 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10361,7 +11664,7 @@
 		(dnp no)
 		(uuid "6d2323b1-a0e4-4fdc-a6c1-48716921e7db")
 		(property "Reference" "TP4"
-			(at 247.65 143.5099 90)
+			(at 247.65 142.2399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10370,7 +11673,7 @@
 			)
 		)
 		(property "Value" "RST"
-			(at 247.65 146.0499 90)
+			(at 247.65 144.7799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10379,7 +11682,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 242.57 149.86 0)
+			(at 242.57 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10388,7 +11691,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 242.57 149.86 0)
+			(at 242.57 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10397,7 +11700,52 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 242.57 144.78 0)
+			(at 242.57 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 242.57 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 242.57 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 242.57 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 242.57 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 242.57 143.51 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10481,6 +11829,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 162.56 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 162.56 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 162.56 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 162.56 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 162.56 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8ff2c629-1032-43f4-9694-59c7c953bc46")
 		)
@@ -10544,6 +11937,51 @@
 		)
 		(property "Description" "Solder Jumper, 2-pole, closed/bridged"
 			(at 29.21 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 29.21 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 29.21 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 29.21 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 29.21 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 29.21 148.59 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10713,6 +12151,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 88.9 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 88.9 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 88.9 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 88.9 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 88.9 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "73be56fe-f771-4f9d-b5d8-3b0b195d7b04")
 		)
@@ -10730,7 +12213,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 242.57 132.08 0)
+		(at 242.57 130.81 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10739,7 +12222,7 @@
 		(fields_autoplaced yes)
 		(uuid "7be63294-95b7-4743-b7d0-2f63d3c3149f")
 		(property "Reference" "#PWR031"
-			(at 242.57 138.43 0)
+			(at 242.57 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10748,7 +12231,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 242.57 137.16 0)
+			(at 242.57 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10756,7 +12239,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 242.57 132.08 0)
+			(at 242.57 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10765,7 +12248,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 242.57 132.08 0)
+			(at 242.57 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10774,7 +12257,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 242.57 132.08 0)
+			(at 242.57 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10875,6 +12358,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 38.1 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 38.1 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 38.1 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 38.1 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 38.1 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "B1"
 			(uuid "57998eae-0547-484c-8adc-c89e60fd4584")
 		)
@@ -10937,7 +12465,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 265.43 139.7 270)
+		(at 265.43 138.43 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10945,7 +12473,7 @@
 		(dnp no)
 		(uuid "82eac19b-8a32-4c3b-9bcc-3c27c1388a50")
 		(property "Reference" "TP7"
-			(at 270.51 138.4299 90)
+			(at 270.51 137.1599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10954,7 +12482,7 @@
 			)
 		)
 		(property "Value" "SCL"
-			(at 270.51 140.9699 90)
+			(at 270.51 139.6999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10963,7 +12491,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 265.43 144.78 0)
+			(at 265.43 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10972,7 +12500,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 265.43 144.78 0)
+			(at 265.43 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10981,7 +12509,52 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 265.43 139.7 0)
+			(at 265.43 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 265.43 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 265.43 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 265.43 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 265.43 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 265.43 138.43 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11046,6 +12619,60 @@
 		)
 		(property "Description" "Resistor"
 			(at 262.89 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "311-10.0KHRCT-ND"
+			(at 262.89 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 262.89 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 262.89 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 262.89 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 262.89 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 262.89 74.93 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11140,6 +12767,51 @@
 			)
 		)
 		(property "Part Number" "SKRKAHE020"
+			(at 160.02 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 160.02 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 160.02 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 160.02 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 160.02 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
 			(at 160.02 182.88 0)
 			(effects
 				(font
@@ -11281,6 +12953,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 260.35 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "311-22.0HRCT-ND"
+			(at 260.35 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 260.35 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 260.35 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 260.35 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7f78c62e-1dd4-4147-88aa-9ff4526eaf0a")
 		)
@@ -11368,6 +13085,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 77.47 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 77.47 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 77.47 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 77.47 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 77.47 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "91e673a6-83dd-4ea6-ace8-fb21436f461f")
 		)
@@ -11428,6 +13190,60 @@
 		)
 		(property "Description" "Resistor"
 			(at 57.15 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "311-5.10KHRCT-ND"
+			(at 57.15 44.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 57.15 44.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 57.15 44.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 57.15 44.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 57.15 44.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 57.15 44.45 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11571,6 +13387,60 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 153.67 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 153.67 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 153.67 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 153.67 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 153.67 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "490-8009-1-ND"
+			(at 153.67 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8ea9f12e-1b50-4f07-8902-9524c58984ca")
 		)
@@ -11647,6 +13517,117 @@
 			(project "Soily"
 				(path "/997c6132-d469-42f4-b223-4701bc9a501f"
 					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 265.43 158.75 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9ce0d60c-3a1e-4c3f-a56b-ef4172238b69")
+		(property "Reference" "TP12"
+			(at 270.51 157.4799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SOIL_B"
+			(at 270.51 160.0199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 265.43 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 265.43 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 265.43 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 265.43 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 265.43 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 265.43 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 265.43 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 265.43 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d45da5f6-c1e1-4a0b-ada2-7ae8f170314d")
+		)
+		(instances
+			(project "Soily"
+				(path "/997c6132-d469-42f4-b223-4701bc9a501f"
+					(reference "TP12")
 					(unit 1)
 				)
 			)
@@ -11783,6 +13764,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 123.19 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 123.19 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 123.19 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 123.19 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 123.19 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "204f33fb-c5c5-46ac-9008-bb5038fc26cf")
 		)
@@ -11853,6 +13879,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 38.1 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 38.1 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 38.1 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 38.1 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 38.1 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a49c182a-e489-4ad5-abac-95e808c83225")
 		)
@@ -11913,6 +13984,51 @@
 		)
 		(property "Description" "Resistor"
 			(at 214.63 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 214.63 135.89 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 214.63 135.89 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 214.63 135.89 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 214.63 135.89 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 214.63 135.89 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12206,6 +14322,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 29.21 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 29.21 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 29.21 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 29.21 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 29.21 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "bdff380c-cab7-4fac-ba82-15e6ae651edc")
 		)
@@ -12477,6 +14638,60 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey Part Number" "311-10.0KHRCT-ND"
+			(at 273.05 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 273.05 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 273.05 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 273.05 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 273.05 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 273.05 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "95ea2478-f67d-4c30-9f97-5494af839b0b")
 		)
@@ -12556,6 +14771,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 149.86 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 149.86 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 149.86 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 149.86 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 149.86 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7fa87163-6b3f-4efb-9b79-95d74a2cecfe")
 		)
@@ -12573,7 +14833,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 242.57 139.7 270)
+		(at 242.57 138.43 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12581,7 +14841,7 @@
 		(dnp no)
 		(uuid "d8f7bd32-4f79-4209-bfb5-6dfe7f49ae48")
 		(property "Reference" "TP3"
-			(at 247.65 138.4299 90)
+			(at 247.65 137.1599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12590,7 +14850,7 @@
 			)
 		)
 		(property "Value" "BOOT"
-			(at 247.65 140.9699 90)
+			(at 247.65 139.6999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12599,7 +14859,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 242.57 144.78 0)
+			(at 242.57 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12608,7 +14868,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 242.57 144.78 0)
+			(at 242.57 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12617,7 +14877,52 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 242.57 139.7 0)
+			(at 242.57 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 242.57 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 242.57 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 242.57 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 242.57 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 242.57 138.43 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12758,6 +15063,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 162.56 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "311-10.0KHRCT-ND"
+			(at 162.56 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 162.56 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 162.56 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 162.56 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "70161ab4-ecd3-4f6e-b0ab-5f0a544d245b")
 		)
@@ -12836,6 +15186,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 107.95 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 107.95 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 107.95 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 107.95 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 107.95 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ab5fd8a9-12f4-4b20-bea5-c9bb73ade1da")
 		)
@@ -12898,6 +15293,51 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 123.19 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 123.19 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 123.19 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 123.19 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 123.19 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
 			(at 123.19 44.45 0)
 			(effects
 				(font
@@ -12977,6 +15417,51 @@
 			)
 		)
 		(property "Digikey Part Number" "490-5798-1-ND"
+			(at 204.47 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 204.47 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 204.47 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 204.47 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 204.47 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
 			(at 204.47 31.75 0)
 			(effects
 				(font
@@ -13134,7 +15619,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 242.57 127 270)
+		(at 242.57 125.73 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13143,7 +15628,7 @@
 		(fields_autoplaced yes)
 		(uuid "ea13b2f2-d9eb-499b-b6d2-d3c8eac77c93")
 		(property "Reference" "TP1"
-			(at 247.65 125.7299 90)
+			(at 247.65 124.4599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13152,7 +15637,7 @@
 			)
 		)
 		(property "Value" "3.3V"
-			(at 247.65 128.2699 90)
+			(at 247.65 126.9999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13161,7 +15646,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 242.57 132.08 0)
+			(at 242.57 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13170,7 +15655,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 242.57 132.08 0)
+			(at 242.57 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13179,7 +15664,52 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 242.57 127 0)
+			(at 242.57 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 242.57 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 242.57 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 242.57 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 242.57 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 242.57 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13267,7 +15797,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 242.57 149.86 270)
+		(at 242.57 148.59 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13275,7 +15805,7 @@
 		(dnp no)
 		(uuid "eb9ec853-ae6a-4d3c-bcb2-edadb27d9452")
 		(property "Reference" "TP5"
-			(at 247.65 148.5899 90)
+			(at 247.65 147.3199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13284,7 +15814,7 @@
 			)
 		)
 		(property "Value" "UART_TX"
-			(at 247.65 151.1299 90)
+			(at 247.65 149.8599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13293,7 +15823,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 242.57 154.94 0)
+			(at 242.57 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13302,7 +15832,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 242.57 154.94 0)
+			(at 242.57 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13311,7 +15841,52 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 242.57 149.86 0)
+			(at 242.57 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 242.57 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 242.57 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 242.57 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 242.57 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 242.57 148.59 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13481,6 +16056,51 @@
 				(hide yes)
 			)
 		)
+		(property "Availability" ""
+			(at 71.12 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 71.12 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 71.12 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 71.12 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 71.12 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "2813f0ef-194d-4f81-823c-143ec17a185b")
 		)
@@ -13555,6 +16175,51 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
+			(at 281.94 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 281.94 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 281.94 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 281.94 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 281.94 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
 			(at 281.94 15.24 0)
 			(effects
 				(font
