@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "MountingHoleCompact")(type "KiCad")(uri "${KIPRJMOD}/Components/Mounting/MountingHoleCompact.pretty")(options "")(descr ""))
+  (lib (name "BQ25570")(type "KiCad")(uri "${KIPRJMOD}/Components/BQ25570")(options "")(descr ""))
+)

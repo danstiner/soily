@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 7,
+    "active_layer": 0,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -50,7 +50,7 @@
       "conflict_shadows",
       "shapes"
     ],
-    "visible_layers": "ffffffff_ffffffff_aaaaaaa2_aaa8aaaf",
+    "visible_layers": "ffffffff_ffffffff_aaaa8aa2_aaaaaaaf",
     "zone_display_mode": 0
   },
   "git": {
@@ -59,7 +59,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "Breakout_FDC2212.kicad_prl",
+    "filename": "Breakout_BQ25570_Cap.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {

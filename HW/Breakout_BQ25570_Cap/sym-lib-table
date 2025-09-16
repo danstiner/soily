@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "BQ25570RGRR")(type "KiCad")(uri "${KIPRJMOD}/Components/BQ25570/BQ25570RGRR.kicad_sym")(options "")(descr ""))
+)
