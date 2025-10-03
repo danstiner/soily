@@ -116,6 +116,8 @@
 			(outputdirectory "/Users/dan/Downloads/out/")
 		)
 	)
+	(property "REVISION" "2")
+	(property "YEAR" "2025")
 	(net 0 "")
 	(net 1 "/VIN")
 	(net 2 "Net-(D3-A)")
@@ -10712,7 +10714,7 @@
 			)
 		)
 	)
-	(gr_text "Daniel Stiner 2025v0.1"
+	(gr_text "Daniel Stiner ${REVISION}"
 		(at 120 118 0)
 		(layer "B.SilkS")
 		(uuid "1b51cfaa-80b8-4e43-9224-af5110c15939")
@@ -10724,7 +10726,7 @@
 			(justify left bottom mirror)
 		)
 	)
-	(gr_text "BQ25570 Solar Harvester Breakout\nUltra low power, min 600mV cold start\n\nInput: Two BPW34 photodiodes in series\nStorage: Peak 5.5V, parallel 100uF MLCCs\nOutput: 3.3V, peak 110mA\n\nBridge ~{EN} to GND to enable charging\nBridge VOK to OUTEN to enable output\nBridge VIN to BPW to use onboard BPW34's\nOutput requires VBAT>3.5V with 4.5V hysteresis"
+	(gr_text "${TITLE}\nUltra low power, min 600mV cold start\n\nInput: Two BPW34 photodiodes in series\nStorage: Peak 5.5V, parallel 100uF MLCCs\nOutput: 3.3V, peak 110mA\n\nBridge ~{EN} to GND to enable charging\nBridge VOK to OUTEN to enable output\nBridge VIN to BPW to use onboard BPW34's\nOutput requires VBAT>3.5V with 4.5V hysteresis"
 		(at 128.2 116.4 0)
 		(layer "B.SilkS")
 		(uuid "ac69bcb5-ea81-49e8-be41-828cba1b4889")

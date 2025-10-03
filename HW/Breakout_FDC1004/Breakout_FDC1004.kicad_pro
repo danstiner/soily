@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.127,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.3048
+          "min_clearance": 0.1524
         }
       },
       "diff_pair_dimensions": [
@@ -60,11 +60,11 @@
       ],
       "drc_exclusions": [
         [
-          "lib_footprint_mismatch|108475000|104000000|64e5b04e-7538-4a47-9bb7-1fffd927acea|00000000-0000-0000-0000-000000000000",
+          "lib_footprint_mismatch|103694901|108644249|e8f404ea-0ce1-4ddd-91bf-4a650a6519ed|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "lib_footprint_mismatch|112537500|109000000|ea9013fa-a244-4a36-830b-2cfd00a53d72|00000000-0000-0000-0000-000000000000",
+          "lib_footprint_mismatch|112914300|109000000|01547745-d4bc-46d1-8a05-310f93989315|00000000-0000-0000-0000-000000000000",
           ""
         ]
       ],
@@ -250,7 +250,15 @@
   "erc": {
     "erc_exclusions": [
       [
-        "lib_symbol_mismatch|1447800|1168400|cb6d7b30-e45e-431e-9ab3-27b82954f615|00000000-0000-0000-0000-000000000000|||",
+        "lib_symbol_mismatch|1409700|1003300|0994bbc0-4de5-4d62-aee0-2bef5ac68d7e|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
+        "lib_symbol_mismatch|812800|292100|2ae22a7a-0ea4-4b45-82d6-c9772c8d176e|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
+        "lib_symbol_mismatch|812800|977900|ac6429cf-72c8-4d8b-a2d7-ec7ac47932a4|00000000-0000-0000-0000-000000000000|||",
         ""
       ]
     ],
@@ -457,7 +465,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "error",
+      "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
@@ -467,6 +475,7 @@
       "single_global_label": "ignore",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
+      "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -477,7 +486,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Breakout_BQ25570_Cap.kicad_pro",
+    "filename": "Breakout_FDC1004.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -587,7 +596,7 @@
       "plot": "/Users/dan/Downloads/out/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "Breakout_BQ25570_Cap.step",
+      "step": "Breakout_FDC1004.step",
       "svg": "",
       "vrml": ""
     },
@@ -802,7 +811,7 @@
         "version": 0
       },
       "model_mode": 4,
-      "workbook_filename": "Breakout_BQ25570_Cap.wbk"
+      "workbook_filename": "Breakout_FDC1004.wbk"
     },
     "page_layout_descr_file": "",
     "plot_directory": "",
@@ -823,6 +832,6 @@
     ]
   ],
   "text_variables": {
-    "REVISION": "2025v2"
+    "REVISION": "2025v1"
   }
 }

@@ -5,8 +5,9 @@
 	(uuid "997c6132-d469-42f4-b223-4701bc9a501f")
 	(paper "A4")
 	(title_block
-		(title "Breakout for BQ25570 Energy Harvester")
-		(date "2025-09-10")
+		(title "BQ25570 Solar Harvester Breakout")
+		(date "2025-10-02")
+		(rev "${REVISION}")
 	)
 	(lib_symbols
 		(symbol "BQ25570RGRR:BQ25570RGRR"
@@ -2913,6 +2914,17 @@
 		)
 		(uuid "2afd19b9-16ad-4aa5-9786-77b3143401eb")
 	)
+	(text "Defaults to\ndisabled"
+		(exclude_from_sim no)
+		(at 113.284 117.348 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3d2d1551-6286-4c44-9c66-b5e8079b7601")
+	)
 	(text "VOC_SAMP bridged VSTOR = MPP 80% of VOC\nVOC_SAMP bridged GND = MPP 50% of VOC"
 		(exclude_from_sim no)
 		(at 131.572 84.836 0)
@@ -3322,6 +3334,16 @@
 	)
 	(wire
 		(pts
+			(xy 105.41 121.92) (xy 105.41 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c65160a-46c9-48b5-9511-650b4ff425b6")
+	)
+	(wire
+		(pts
 			(xy 137.16 143.51) (xy 137.16 135.89)
 		)
 		(stroke
@@ -3410,6 +3432,16 @@
 			(type default)
 		)
 		(uuid "3fe6e363-838b-496a-b16a-deddd25d8174")
+	)
+	(wire
+		(pts
+			(xy 105.41 123.19) (xy 120.65 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47f34253-e14d-4a33-83a0-a80c6adbd027")
 	)
 	(wire
 		(pts
@@ -3543,7 +3575,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 123.19) (xy 93.98 120.65)
+			(xy 86.36 133.35) (xy 86.36 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3905,13 +3937,23 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 113.03) (xy 93.98 109.22)
+			(xy 86.36 114.3) (xy 86.36 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c09634cb-aafc-4d3b-9456-80eb3e9ad303")
+	)
+	(wire
+		(pts
+			(xy 105.41 125.73) (xy 120.65 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2ce8a07-3ba8-4db1-b4b3-96d320fa3e1e")
 	)
 	(wire
 		(pts
@@ -4036,7 +4078,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 109.22) (xy 120.65 109.22)
+			(xy 86.36 109.22) (xy 120.65 109.22)
 		)
 		(stroke
 			(width 0)
@@ -4183,6 +4225,16 @@
 			(justify right bottom)
 		)
 		(uuid "30856ff2-9f71-41bc-8cf5-f7b123252799")
+	)
+	(label "VSTOR"
+		(at 105.41 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "36ece0ef-566d-4071-aa06-8a14d54cf82d")
 	)
 	(label "OK_PROG"
 		(at 144.78 135.89 270)
@@ -5307,7 +5359,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 93.98 116.84 0)
+		(at 86.36 118.11 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5316,7 +5368,7 @@
 		(fields_autoplaced yes)
 		(uuid "3ae54b9a-6e6e-443c-a4f9-36ebd86471e9")
 		(property "Reference" "CREF1"
-			(at 97.79 115.5699 0)
+			(at 90.17 116.8399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5325,7 +5377,7 @@
 			)
 		)
 		(property "Value" "0.01u"
-			(at 97.79 118.1099 0)
+			(at 90.17 119.3799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5334,7 +5386,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 94.9452 120.65 0)
+			(at 87.3252 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5343,7 +5395,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 93.98 116.84 0)
+			(at 86.36 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5352,7 +5404,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 93.98 116.84 0)
+			(at 86.36 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5892,7 +5944,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.70M"
+		(property "Value" "4.70M 1%"
 			(at 175.26 156.2099 0)
 			(effects
 				(font
@@ -6622,7 +6674,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "8.66M"
+		(property "Value" "8.66M 1%"
 			(at 116.84 148.5899 0)
 			(effects
 				(font
@@ -6978,7 +7030,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "6.80M"
+		(property "Value" "6.80M 1%"
 			(at 149.86 170.1799 0)
 			(effects
 				(font
@@ -7024,6 +7076,76 @@
 			(project "Breakout_BQ25570_Cap"
 				(path "/997c6132-d469-42f4-b223-4701bc9a501f"
 					(reference "ROK2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 105.41 118.11 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "996b4a0e-5d44-43b7-9fb0-c8eca25316e1")
+		(property "Reference" "R1"
+			(at 107.95 116.8399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 107.95 119.3799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 103.632 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 105.41 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 105.41 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "72159ddc-72ed-4651-b8e0-01b94fb03566")
+		)
+		(pin "2"
+			(uuid "41a2f11d-5261-42d6-a3fc-d1e59e4b356d")
+		)
+		(instances
+			(project "Breakout_BQ25570_Cap"
+				(path "/997c6132-d469-42f4-b223-4701bc9a501f"
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -7527,7 +7649,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.32M"
+		(property "Value" "4.32M 1%"
 			(at 116.84 156.2099 0)
 			(effects
 				(font
@@ -7789,8 +7911,78 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 105.41 129.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c409e651-ee16-4a56-934c-da9534e2c258")
+		(property "Reference" "R2"
+			(at 107.95 128.2699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 107.95 130.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 103.632 129.54 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 105.41 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 105.41 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "28ae7692-6d88-44ae-b0da-47cc193db3f5")
+		)
+		(pin "2"
+			(uuid "c59ea03c-0e3a-4ccd-8655-1d19a246e6fb")
+		)
+		(instances
+			(project ""
+				(path "/997c6132-d469-42f4-b223-4701bc9a501f"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
-		(at 93.98 123.19 0)
+		(at 86.36 133.35 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7799,7 +7991,7 @@
 		(fields_autoplaced yes)
 		(uuid "c5f9a506-dbd2-497e-af70-cbc45962c585")
 		(property "Reference" "#PWR011"
-			(at 93.98 129.54 0)
+			(at 86.36 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7808,7 +8000,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 93.98 128.27 0)
+			(at 86.36 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7816,7 +8008,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 93.98 123.19 0)
+			(at 86.36 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7825,7 +8017,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 93.98 123.19 0)
+			(at 86.36 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7834,7 +8026,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 93.98 123.19 0)
+			(at 86.36 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8530,7 +8722,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "3.57M"
+		(property "Value" "3.57M 1%"
 			(at 149.86 177.7999 0)
 			(effects
 				(font
@@ -8795,7 +8987,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "7.87M"
+		(property "Value" "7.87M 1%"
 			(at 175.26 148.5899 0)
 			(effects
 				(font
@@ -8841,6 +9033,72 @@
 			(project "Breakout_BQ25570_Cap"
 				(path "/997c6132-d469-42f4-b223-4701bc9a501f"
 					(reference "RVO2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 105.41 133.35 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e98fdbab-b13f-4882-92c1-92bc7e09f258")
+		(property "Reference" "#PWR017"
+			(at 105.41 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 105.41 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 105.41 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 105.41 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 105.41 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fbca2537-af69-4411-83ce-ed3fef950df3")
+		)
+		(instances
+			(project "Breakout_BQ25570_Cap"
+				(path "/997c6132-d469-42f4-b223-4701bc9a501f"
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
