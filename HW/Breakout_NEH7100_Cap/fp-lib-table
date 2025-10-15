@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "MountingHoleCompact")(type "KiCad")(uri "${KIPRJMOD}/Components/Mounting/MountingHoleCompact.pretty")(options "")(descr ""))
+  (lib (name "NEH7100BUHP")(type "KiCad")(uri "${KIPRJMOD}/Components/NEH7100BUHP/KiCad")(options "")(descr ""))
+)

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "NEH7100BUHP")(type "KiCad")(uri "${KIPRJMOD}/Components/NEH7100BUHP/KiCad/NEH7100BUHP.kicad_sym")(options "")(descr ""))
+)
