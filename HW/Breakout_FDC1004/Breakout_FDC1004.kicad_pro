@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 60.0,
-          "width": 6.0
+          "drill": 0.254,
+          "height": 0.508,
+          "width": 0.508
         },
         "silk_line_width": 0.127,
         "silk_text_italic": false,
@@ -60,11 +60,11 @@
       ],
       "drc_exclusions": [
         [
-          "lib_footprint_mismatch|103694901|108644249|e8f404ea-0ce1-4ddd-91bf-4a650a6519ed|00000000-0000-0000-0000-000000000000",
+          "lib_footprint_mismatch|103694901|108744249|e8f404ea-0ce1-4ddd-91bf-4a650a6519ed|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "lib_footprint_mismatch|112914300|109000000|01547745-d4bc-46d1-8a05-310f93989315|00000000-0000-0000-0000-000000000000",
+          "lib_footprint_mismatch|110950001|109500000|01547745-d4bc-46d1-8a05-310f93989315|00000000-0000-0000-0000-000000000000",
           ""
         ]
       ],
@@ -248,20 +248,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      [
-        "lib_symbol_mismatch|1409700|1003300|0994bbc0-4de5-4d62-aee0-2bef5ac68d7e|00000000-0000-0000-0000-000000000000|||",
-        ""
-      ],
-      [
-        "lib_symbol_mismatch|812800|292100|2ae22a7a-0ea4-4b45-82d6-c9772c8d176e|00000000-0000-0000-0000-000000000000|||",
-        ""
-      ],
-      [
-        "lib_symbol_mismatch|812800|977900|ac6429cf-72c8-4d8b-a2d7-ec7ac47932a4|00000000-0000-0000-0000-000000000000|||",
-        ""
-      ]
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
