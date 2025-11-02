@@ -10,111 +10,87 @@ static const char *const TAG = "fdc2x1x";
 void FDC2x1xSensor::setup() {
   ESP_LOGCONFIG(TAG, "Setting up FDC2x1x sensor...");
 
-  // Give FDC time to be ready after power-up
-  delay(100);
+  // Mark as not failed before initializing. Some devices will turn off sensors to save on batteries
+  // and when they come back on, the COMPONENT_STATE_FAILED bit must be unset on the component.
+  if (this->is_failed()) {
+    this->reset_to_construction_state();
+  }
 
-  // Try to read manufacturer ID register (16-bit)
+  // Give FDC time to be ready after power-up
+  // TODO remove after verifying this is not necessary.
+  delay(10);
+
+  // Read manufacturer ID register
   uint16_t manufacturer_id;
   if (this->read_register16(REG_MANUFACTURER_ID, manufacturer_id) != i2c::ERROR_OK) {
-    ESP_LOGE(TAG, "Failed to read manufacturer ID register");
+    this->error_code_ = READ_MANUFACTURER_ID_FAILED;
     this->mark_failed();
     return;
   }
-
-  ESP_LOGI(TAG, "Manufacturer ID: 0x%04X", manufacturer_id);
 
   if (manufacturer_id != EXPECTED_MANUFACTURER_ID) {
-    ESP_LOGE(TAG, "Unexpected manufacturer ID: 0x%04X (expected: 0x%04X)",
-             manufacturer_id, EXPECTED_MANUFACTURER_ID);
+    ESP_LOGE(TAG, "Wrong manufacturer ID: 0x%04X", manufacturer_id);
+    this->error_code_ = WRONG_CHIP_ID;
     this->mark_failed();
     return;
   }
 
-  // Try to read device ID register (16-bit: 0x3054 or 0x3055)
+  // Read device ID register
   uint16_t device_id;
   if (this->read_register16(REG_DEVICE_ID, device_id) != i2c::ERROR_OK) {
-    ESP_LOGE(TAG, "Failed to read device ID register");
+    this->error_code_ = READ_DEVICE_ID_FAILED;
     this->mark_failed();
     return;
   }
 
-  ESP_LOGI(TAG, "Device ID: 0x%04X", device_id);
-  this->device_detected_ = true;
+  ESP_LOGCONFIG(TAG, "Found FDC2x1x (ID: 0x%04X)", device_id);
 
-  // Reset the device first
-  ESP_LOGI(TAG, "Resetting device...");
+  // Reset device
   if (this->write_register16(REG_RESET_DEV, 0x8000) != i2c::ERROR_OK) {
-    ESP_LOGE(TAG, "Failed to reset device");
+    this->error_code_ = RESET_FAILED;
     this->mark_failed();
     return;
   }
-
-  // Wait for reset to complete
   delay(10);
-  ESP_LOGI(TAG, "Device reset complete");
 
-  // Configure sensor following TI recommended sequence
-  ESP_LOGD(TAG, "Configuring sensor using TI recommended sequence...");
-
-  // Step 1: Set the dividers for channel 0
-  if (this->write_register16(REG_CLOCK_DIVIDERS_CH0, CLOCK_DIVIDER_CH0) != i2c::ERROR_OK) {
-    ESP_LOGE(TAG, "Failed to set clock dividers");
+  // Configure sensor
+  if (this->write_register16(REG_CLOCK_DIVIDERS_CH0, CLOCK_DIVIDER_CH0) != i2c::ERROR_OK ||
+      this->write_register16(REG_DRIVE_CH0, DRIVE_CURRENT) != i2c::ERROR_OK ||
+      this->write_register16(REG_SETTLECOUNT_CH0, SETTLECOUNT_CH0) != i2c::ERROR_OK ||
+      this->write_register16(REG_RCOUNT_CH0, RCOUNT_CH0) != i2c::ERROR_OK ||
+      this->write_register16(REG_MUX_CONFIG, MUX_CONFIG) != i2c::ERROR_OK ||
+      this->write_register16(REG_ERROR_CONFIG, ERROR_CONFIG) != i2c::ERROR_OK ||
+      this->write_register16(REG_CONFIG, CONFIG) != i2c::ERROR_OK) {
+    this->error_code_ = CONFIGURATION_FAILED;
     this->mark_failed();
     return;
   }
-
-  // Step 2: Set sensor drive current
-  if (this->write_register16(REG_DRIVE_CH0, DRIVE_CURRENT) != i2c::ERROR_OK) {
-    ESP_LOGE(TAG, "Failed to set drive current");
-    this->mark_failed();
-    return;
-  }
-
-  // Step 3: Set settling time for Channel 0
-  if (this->write_register16(REG_SETTLECOUNT_CH0, SETTLECOUNT_CH0) != i2c::ERROR_OK) {
-    ESP_LOGE(TAG, "Failed to set settle count");
-    this->mark_failed();
-    return;
-  }
-
-  // Step 5: Set conversion time / reference count
-  if (this->write_register16(REG_RCOUNT_CH0, RCOUNT_CH0) != i2c::ERROR_OK) {
-    ESP_LOGE(TAG, "Failed to set reference count");
-    this->mark_failed();
-    return;
-  }
-
-  // Step 7: Program the MUX_CONFIG register
-  if (this->write_register16(REG_MUX_CONFIG, MUX_CONFIG) != i2c::ERROR_OK) {
-    ESP_LOGE(TAG, "Failed to set MUX config");
-    this->mark_failed();
-    return;
-  }
-
-  // Program the ERROR_CONFIG register
-  if (this->write_register16(REG_ERROR_CONFIG, ERROR_CONFIG) != i2c::ERROR_OK) {
-    ESP_LOGE(TAG, "Failed to set MUX config");
-    this->mark_failed();
-    return;
-  }
-
-  // Step 8: Finally, program the CONFIG register
-  if (this->write_register16(REG_CONFIG, CONFIG) != i2c::ERROR_OK) {
-    ESP_LOGE(TAG, "Failed to set configuration");
-    this->mark_failed();
-    return;
-  }
-
-  ESP_LOGI(TAG, "FDC2x1x sensor initialized successfully");
 }
 
 void FDC2x1xSensor::dump_config() {
   ESP_LOGCONFIG(TAG, "FDC2x1x Sensor:");
   LOG_I2C_DEVICE(this);
   if (this->is_failed()) {
-    ESP_LOGE(TAG, "Communication with FDC2x1x failed!");
-  } else {
-    ESP_LOGCONFIG(TAG, "  Device detected: %s", this->device_detected_ ? "YES" : "NO");
+    switch (this->error_code_) {
+      case READ_MANUFACTURER_ID_FAILED:
+        ESP_LOGE(TAG, "Failed to read manufacturer ID");
+        break;
+      case WRONG_CHIP_ID:
+        ESP_LOGE(TAG, "Wrong chip ID");
+        break;
+      case READ_DEVICE_ID_FAILED:
+        ESP_LOGE(TAG, "Failed to read device ID");
+        break;
+      case RESET_FAILED:
+        ESP_LOGE(TAG, "Reset failed");
+        break;
+      case CONFIGURATION_FAILED:
+        ESP_LOGE(TAG, "Configuration failed");
+        break;
+      default:
+        ESP_LOGE(TAG, "Setup failed");
+        break;
+    }
   }
   LOG_UPDATE_INTERVAL(this);
 }
@@ -126,80 +102,66 @@ void FDC2x1xSensor::update() {
 
   // Check status register first
   uint16_t status;
-  if (this->read_register16(REG_STATUS, status) == i2c::ERROR_OK) {
-    ESP_LOGD(TAG, "Status register: 0x%04X", status);
-  
-    // Bit 6: Data Ready
-    ESP_LOGD(TAG, "  Data ready: %s", (status & 0x0040) ? "YES" : "NO");
-    
-    // Bit 11: Watchdog Timeout Error
-    ESP_LOGD(TAG, "  Watchdog error: %s", (status & 0x0800) ? "YES" : "NO");
-    
-    // Bit 10: Amplitude High Warning
-    ESP_LOGD(TAG, "  Amplitude HIGH warning: %s", (status & 0x0400) ? "YES" : "NO");
-    
-    // Bit 9: Amplitude Low Warning
-    ESP_LOGD(TAG, "  Amplitude LOW warning: %s", (status & 0x0200) ? "YES" : "NO");
-    
-    // Bits 15:14: Error Channel (which channel caused the error)
-    uint8_t err_chan = (status >> 14) & 0x03;
-    if (status & 0xC000) {  // If any error channel bits are set
-      ESP_LOGD(TAG, "  Error channel: CH%d", err_chan);
-    }
-
-    // Unread conversion flags
-    ESP_LOGD(TAG, "  CH0 unread: %s", (status & 0x0008) ? "YES" : "NO");
-    ESP_LOGD(TAG, "  CH1 unread: %s", (status & 0x0004) ? "YES" : "NO");
-    ESP_LOGD(TAG, "  CH2 unread: %s", (status & 0x0002) ? "YES" : "NO");
-    ESP_LOGD(TAG, "  CH3 unread: %s", (status & 0x0001) ? "YES" : "NO");
+  if (this->read_register16(REG_STATUS, status) != i2c::ERROR_OK) {
+    ESP_LOGW(TAG, "Failed to read status register");
+    this->status_set_warning();
+    return;
   }
 
-  // Read back configuration registers for debugging
-  // uint16_t readback;
-  // if (this->read_register16(REG_CONFIG, readback) == i2c::ERROR_OK) {
-  //   ESP_LOGD(TAG, "CONFIG register: 0x%04X (expected: 0x%04X)", readback, CONFIG);
-  // }
-  // if (this->read_register16(REG_MUX_CONFIG, readback) == i2c::ERROR_OK) {
-  //   ESP_LOGD(TAG, "MUX_CONFIG register: 0x%04X (expected: 0x%04X)", readback, MUX_CONFIG);
-  // }
-  // if (this->read_register16(REG_DRIVE_CH0, readback) == i2c::ERROR_OK) {
-  //   uint8_t idrive = (readback >> 11) & 0x1F;
-  //   ESP_LOGD(TAG, "DRIVE_CH0 register: 0x%04X, IDRIVE: %d", readback, idrive);
-  // }
-  // if (this->read_register16(REG_CLOCK_DIVIDERS_CH0, readback) == i2c::ERROR_OK) {
-  //   uint8_t ref_div = (readback >> 10) & 0x3F;
-  //   uint8_t fin_sel = (readback >> 8) & 0x03;
-  //   ESP_LOGD(TAG, "CLOCK_DIV_CH0: 0x%04X, REF_DIV: %d, FIN_SEL: %d", readback, ref_div, fin_sel);
-  // }
+  // Log status only if there are warnings/errors
+  if (status & 0x0E00) {  // Check error bits: watchdog(11), amp_high(10), amp_low(9)
+    ESP_LOGW(TAG, "Status warnings: 0x%04X", status);
+    if (status & 0x0800) {
+      ESP_LOGW(TAG, "  Watchdog timeout error");
+    }
+    if (status & 0x0400) {
+      ESP_LOGW(TAG, "  Amplitude too high");
+    }
+    if (status & 0x0200) {
+      ESP_LOGW(TAG, "  Amplitude too low");
+    }
+  }
+
+  // Only proceed if CH0 has unread data
+  if (!(status & 0x0008)) {
+    ESP_LOGV(TAG, "No new data available for CH0, skipping read");
+    return;
+  }
 
   // Read channel 0 data
-  uint16_t ch0_data_msb;
-  if (this->read_register16(REG_DATA_CH0_MSB, ch0_data_msb) != i2c::ERROR_OK) {
-    ESP_LOGW(TAG, "Failed to read channel 0 data MSB");
+  uint16_t ch0_data_msr;
+  if (this->read_register16(REG_DATA_CH0_MSR, ch0_data_msr) != i2c::ERROR_OK) {
+    ESP_LOGW(TAG, "Failed to read channel 0 data MSR");
+    this->status_set_warning();
     return;
   }
 
-  bool ch0_watchdog_timeout = ch0_data_msb & (1 << 13);
-  bool ch0_amplitude_warn = ch0_data_msb & (1 << 12);
-  uint16_t ch0_data_res_msb = ch0_data_msb & 0xFFF;
-
-  ESP_LOGD(TAG, "Channel 0 MSB: 0x%04X (%u)", ch0_data_msb, ch0_data_msb);
-
-  uint16_t ch0_data_lsb;
-  if (this->read_register16(REG_DATA_CH0_LSB, ch0_data_lsb) != i2c::ERROR_OK) {
-    ESP_LOGW(TAG, "Failed to read channel 0 data LSB");
+  uint16_t ch0_data_lsr;
+  if (this->read_register16(REG_DATA_CH0_LSR, ch0_data_lsr) != i2c::ERROR_OK) {
+    ESP_LOGW(TAG, "Failed to read channel 0 data LSR");
+    this->status_set_warning();
     return;
   }
 
-  ESP_LOGD(TAG, "Channel 0 LSB: 0x%04X (%u)", ch0_data_lsb, ch0_data_lsb);
+  // Extract 28-bit result and error flags
+  bool ch0_watchdog_timeout = ch0_data_msr & (1 << 13);
+  bool ch0_amplitude_warn = ch0_data_msr & (1 << 12);
+  uint16_t ch0_data_res_msr = ch0_data_msr & 0xFFF;
+  uint32_t ch0_res = (ch0_data_res_msr << 16) | ch0_data_lsr;
 
-  uint32_t ch0_res = ch0_data_res_msb << 16 | ch0_data_lsb; // TODO add masked MSB
-  ESP_LOGD(TAG, "Channel 0 data: 0x%04X (%u) amp:%u, timeout:%u", ch0_res, ch0_res, ch0_amplitude_warn, ch0_watchdog_timeout);
+  // Log warnings if present
+  if (ch0_watchdog_timeout || ch0_amplitude_warn) {
+    ESP_LOGW(TAG, "Channel 0 warnings - timeout:%d, amplitude:%d", ch0_watchdog_timeout, ch0_amplitude_warn);
+  }
 
-  // Publish to sensor if configured (use 32-bit value)
+  ESP_LOGV(TAG, "Channel 0: 0x%08X (%u)", ch0_res, ch0_res);
+
+  // Publish to sensor if configured
   if (this->channel0_sensor_ != nullptr) {
     this->channel0_sensor_->publish_state(ch0_res);
   }
+
+  this->status_clear_warning();
 }
 
 i2c::ErrorCode FDC2x1xSensor::write_register16(uint8_t reg, uint16_t value) {

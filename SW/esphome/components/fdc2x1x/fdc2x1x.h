@@ -21,28 +21,28 @@ static constexpr uint16_t CONFIG_HIGH_CURRENT_DRV = 0x0000; // Normal current dr
 static constexpr uint16_t RCOUNT_CH0 = 0x8329;
 static constexpr uint16_t SETTLECOUNT_CH0 = 0x0020;
 static constexpr uint16_t CLOCK_DIVIDER_CH0 = 0x1001; // CH0_FIN_DIVIDER = 1, FREF_DIVIDER = 1
-static constexpr uint16_t DRIVE_CURRENT = 0x8000;
+static constexpr uint16_t DRIVE_CURRENT = 0x9000;
 static constexpr uint16_t MUX_CONFIG = 0x020D;
 static constexpr uint16_t CONFIG = 0x1481;
 static constexpr uint16_t ERROR_CONFIG = 0x3800;
 
 /// I2C register addresses.
 enum {
-  // FDC2212 / FDC2214 data registers (up to 2?-bit resolution split across MSB/LSB)
-  REG_DATA_CH0_MSB = 0x00,
-  REG_DATA_CH0_LSB = 0x01,
-  REG_DATA_CH1_MSB = 0x02,
-  REG_DATA_CH1_LSB = 0x03,
-  REG_DATA_CH2_MSB = 0x04,
-  REG_DATA_CH2_LSB = 0x05,
-  REG_DATA_CH3_MSB = 0x06,
-  REG_DATA_CH3_LSB = 0x07,
+  // FDC2212 / FDC2214 data registers (up to 28-bit resolution split across two registers)
+  REG_DATA_CH0_MSR = 0x00,
+  REG_DATA_CH0_LSR = 0x01,
+  REG_DATA_CH1_MSR = 0x02,
+  REG_DATA_CH1_LSR = 0x03,
+  REG_DATA_CH2_MSR = 0x04,
+  REG_DATA_CH2_LSR = 0x05,
+  REG_DATA_CH3_MSR = 0x06,
+  REG_DATA_CH3_LSR = 0x07,
 
   // FDC2112 / FDC2114 data registers (up to 12-bit resolution)
-  REG_DATA_CH0 = REG_DATA_CH0_MSB,
-  REG_DATA_CH1 = REG_DATA_CH1_MSB,
-  REG_DATA_CH2 = REG_DATA_CH2_MSB,
-  REG_DATA_CH3 = REG_DATA_CH3_MSB,
+  REG_DATA_CH0 = REG_DATA_CH0_MSR,
+  REG_DATA_CH1 = REG_DATA_CH1_MSR,
+  REG_DATA_CH2 = REG_DATA_CH2_MSR,
+  REG_DATA_CH3 = REG_DATA_CH3_MSR,
 
   // Reference count registers
   REG_RCOUNT_CH0 = 0x08,
@@ -94,6 +94,15 @@ enum {
   REG_DEVICE_ID = 0x7F,
 };
 
+enum ErrorCode {
+  NONE = 0,
+  READ_MANUFACTURER_ID_FAILED,
+  WRONG_CHIP_ID,
+  READ_DEVICE_ID_FAILED,
+  RESET_FAILED,
+  CONFIGURATION_FAILED,
+};
+
 class FDC2x1xSensor : public PollingComponent, public i2c::I2CDevice {
  public:
   FDC2x1xSensor() : PollingComponent(60000) {}
@@ -105,7 +114,7 @@ class FDC2x1xSensor : public PollingComponent, public i2c::I2CDevice {
   void set_channel0_sensor(sensor::Sensor *sensor) { this->channel0_sensor_ = sensor; }
 
  protected:
-  bool device_detected_{false};
+  ErrorCode error_code_{NONE};
   sensor::Sensor *channel0_sensor_{nullptr};
 
   // Helper methods for 16-bit register operations
