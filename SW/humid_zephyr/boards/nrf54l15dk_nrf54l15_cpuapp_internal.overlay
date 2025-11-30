@@ -1,0 +1,67 @@
+/ {
+};
+
+/* I2C for SHT45 humidity/temperature sensor */
+&i2c21 {
+	status = "okay";
+	pinctrl-0 = <&i2c21_default>;
+	pinctrl-1 = <&i2c21_sleep>;
+	pinctrl-names = "default", "sleep";
+
+	sht45: sht4x@44 {
+		compatible = "sensirion,sht4x";
+		reg = <0x44>;
+		repeatability = <2>;
+		status = "okay";
+	};
+};
+
+&pinctrl {
+	i2c21_default: i2c21_default {
+		group1 {
+			psels = <NRF_PSEL(TWIM_SDA, 1, 11)>, <NRF_PSEL(TWIM_SCL, 1, 12)>;
+			bias-pull-up;
+		};
+	};
+
+	i2c21_sleep: i2c21_sleep {
+		group1 {
+			psels = <NRF_PSEL(TWIM_SDA, 1, 11)>, <NRF_PSEL(TWIM_SCL, 1, 12)>;
+			low-power-enable;
+		};
+	};
+};
+
+/* Keep UART20 for console (it's the default console) */
+&uart20 {
+	status = "okay";
+	current-speed = <115200>;
+};
+
+/* Disable unused peripherals to save power */
+&uart21 {
+	status = "disabled";
+};
+
+&uart22 {
+	status = "disabled";
+};
+
+&uart30 {
+	status = "disabled";
+};
+
+// restore full RRAM and SRAM space - by default some parts are dedicated to FLRP
+&cpuapp_rram {
+	reg = <0x0 DT_SIZE_K(1524)>;
+};
+
+&cpuapp_sram {
+	reg = <0x20000000 DT_SIZE_K(256)>;
+	ranges = <0x0 0x20000000  0x40000>;
+};
+
+// Disable external flash
+&mx25r64 {
+	status = "disabled";
+};
