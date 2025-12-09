@@ -101,7 +101,7 @@ uart:~$ ot dataset active -x
 
 **Commission with BLE-Thread pairing**:
 ```bash
-chip-tool pairing ble-thread 1 <hex-thread-dataset> 20202021 3840
+chip-tool pairing ble-thread 1 hex:<thread-dataset> 20202021 3840
 ```
 
 ### Viewing Commissioning Info
